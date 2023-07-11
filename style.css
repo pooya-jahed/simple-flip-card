@@ -1,0 +1,68 @@
+@font-face {
+  font-family: Vazir-Medium;
+  src: url(fonts/Vazir-Medium.eot) format("eot"),
+    url(fonts/Vazir-Medium.ttf) format("ttf"),
+    url(fonts/Vazir-Medium.woff) format("woff"),
+    url(fonts/Vazir-Medium.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+*,
+body {
+  direction: rtl;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Vazir-Medium;
+}
+
+ul,
+li,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.flip-cart {
+  border-right: 4px green;
+  width: 300px;
+  height: 400px;
+  perspective: 800px;
+  margin: 130px auto;
+}
+.flip-cart img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 8px 8px 3px rgb(39, 56, 12);
+}
+.flip-cart-inner {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.flip-cart:hover .flip-cart-inner {
+  transform: rotateY(180deg);
+}
+.flip-cart-front,
+.flip-cart-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-cart-back {
+  background-color: rgb(50, 14, 107);
+  color: rgb(228, 19, 88);
+  transform: rotateY(180deg);
+  padding-top: 50%;
+  text-align: center;
+  text-shadow: 5px 6px 10px rgb(104 2 34);
+  box-shadow: 8px 8px 3px rgb(14, 7, 54);
+}
